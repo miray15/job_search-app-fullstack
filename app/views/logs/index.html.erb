@@ -1,1 +1,11 @@
-<h1> Test  </h1>
+<h1>Jobs I've applied to</h1>
+<% @logs.each do |log| %>
+  <h2><%= log.name %></h2>
+  <p>title: <%= log.title %></p>
+  <p>company: <%= log.company %></p>
+  <p>description: <%= log.description %></p>
+  <p>salary: <%= log.salaru %></p>
+  <p>location: <%= log.location %></p>
+  <p>remote: <%= log.remote %></p>
+  <p>next_steps: <%= log.remote %></p>
+<% end %>

@@ -1,8 +1,7 @@
 class LogsController < ApplicationController
 
-  def index  
-    @logs = Log.all
-    render :index 
-  end 
-
+  def index
+    @jobs = Job.all
+    render :index
+  end
 end

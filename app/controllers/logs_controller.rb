@@ -8,7 +8,7 @@ class LogsController < ApplicationController
 
   def show
     @log = Log.find_by(id: params[:id])
-    index :show
+    render :show
   end 
   
   

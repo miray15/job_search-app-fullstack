@@ -30,4 +30,25 @@ class LogsController < ApplicationController
     end
 
 
+
+    def edit
+      @log = Log.find_by(id: params[:id])
+      render :edit
+      end
+
+      def update
+      @log = Log.find_by(id: params[:id])
+      @log.update(
+      title: params[:log][:title],
+      description: params[:log][:description],
+      salary: params[:log][:salary],
+      location: params[:log][:location],
+      remote: params[:log][:remote],
+      next_steps: params[:log][:next_steps],
+      )
+      redirect_to "/logs"
+      end
 end
+
+
+

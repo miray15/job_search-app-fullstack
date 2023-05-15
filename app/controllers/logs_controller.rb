@@ -19,14 +19,14 @@ class LogsController < ApplicationController
     
     def create
     @log = Log.create(
-    title: params[:log][:title],
-    company: params[:log][:company],
-    description: params[:log][:description],
-    salary: params[:log][:salary],
-    remote: params[:log][:remote],
-    next_steps: params[:log][:next_steps],
-    )
-    redirect_to "/logs"
+      title: params[:log][:title],
+      company: params[:log][:company],
+      description: params[:log][:description],
+      salary: params[:log][:salary],
+      remote: params[:log][:remote],
+      next_steps: params[:log][:next_steps],
+      )
+      redirect_to "/logs"
     end
 
 
@@ -48,6 +48,8 @@ class LogsController < ApplicationController
       )
       redirect_to "/logs"
       end
+
+      
 end
 
 
